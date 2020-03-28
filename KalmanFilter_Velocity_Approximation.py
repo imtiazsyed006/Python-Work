@@ -1,3 +1,4 @@
+# This is the exact same algorithm used by Dr Phil Kim in his book Kalman Filter. I only converted his Matlab code to Python.
 import numpy as np
 from numpy.linalg import inv
 import matplotlib.pyplot as plt
