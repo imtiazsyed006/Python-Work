@@ -10,10 +10,9 @@ def GetPos():
     if not Pospp:
         Pospp.append(1)
         Posp = 0
-        Velp = 0
+        Velp = 80
     dt = 0.1
     w = 0 + 10*np.random.randn()
-    print(w)
     v = 0 + 10*np.random.randn()
 
     z = Posp + Velp*dt + v
@@ -62,8 +61,6 @@ def DvKalman(z):
 dt = 0.1
 t = np.linspace(0,10,100)
 Nsamples = len(t)
-#Xsaved = np.zeros((Nsamples, 2))
-#Zsaved = np.zeros((Nsamples, 1))
 Xsaved = []
 Zsaved = []
 
