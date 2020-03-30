@@ -1,3 +1,4 @@
+# You must have a '.xls' file in your directory with the name 'Marks' or you can change the name in line 9
 import xlwt
 import xlrd
 from xlutils.copy import copy
@@ -5,7 +6,7 @@ from tkinter import *
 root = Tk()
 root.title("Marks Uploader")
 root.geometry("500x500")
-            
+# OnReturn function upload marks with Enter       
 def OnReturn(*args):
     rn = int(entry_1.get())
     mar = int(entry_2.get())
