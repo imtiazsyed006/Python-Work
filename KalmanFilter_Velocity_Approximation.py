@@ -29,7 +29,7 @@ def DvKalman(z):
     global R
     if not firstRun:
         firstRun.append(1)
-        dt = 1
+        dt = 0.1
         A = [[1 , dt],
              [0 , 1]]
         H = [[1 , 0]]
