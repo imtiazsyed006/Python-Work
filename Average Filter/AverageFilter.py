@@ -21,7 +21,6 @@ def AvgFilter(x):
 
 def GetVolt():
     w = 0 + 4*np.random.randn(1)
-    print(w)
     z = 14.3 + w
     return z
 
