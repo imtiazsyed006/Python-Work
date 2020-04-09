@@ -30,6 +30,8 @@ def CompFilterWithPI(p, q, r, ax, ay, dt):
         prevPhi   = 0
         prevTheta = 0
         prevPsi   = 0
+        
+        firstRun.append(1)
     
     phi_a, theta_a           = EulerAccel(ax, ay)
     dotPhi, dotTheta, dotPsi = BodyToInertial(p, q, r, prevPhi, prevTheta)
@@ -67,6 +69,7 @@ def PILawPhi(delPhi):
     if not firstRun1:
         prevP      = 0
         prevdelPhi = 0
+        firstRun1.append(1)
         
     p_hat      = prevP + 0.1415*delPhi - 0.1414*prevdelPhi
     prevP      = p_hat
@@ -82,6 +85,7 @@ def PILawTheta(delTheta):
     if not firstRun2:
         prevQ = 0
         prevdelTheta = 0
+        firstRun2.append(1)
         
     q_hat = prevQ + 0.1415*delTheta - 0.1414*prevdelTheta
     prevQ = q_hat
